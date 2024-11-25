@@ -1,7 +1,7 @@
 - name: vars-preferences
   hosts: web
-  vars:
-    COURSE: "Devops with AWS from play level"
+  # vars:
+  #   COURSE: "Devops with AWS from play level"
   # vars_files:
   #   - vars.yaml
   # vars_prompt:
