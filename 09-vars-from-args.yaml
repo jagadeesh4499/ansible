@@ -3,7 +3,7 @@
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "Hello {{NAME}}, Good {{GREETING}}"
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
 
 
-#commmand : ansible-playbook -i inventory -e ansible_user=ec2-user -e ansible_passsword=DevOps321 08-vars-from-args.yaml -e "NAME=jagadeesh GREETING=Morning"
+#commmand : ansible-playbook -i inventory -e ansible_user=ec2-user -e ansible_passsword=DevOps321 08-vars-from-args.yaml -e "COURSE='DevOps with AWS' DURATION=120Hrs TRAINER='Siva Kumar Reddy'"
