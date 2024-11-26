@@ -28,8 +28,8 @@
   - name: Convert list to map
     vars:
       list:
-      - course: "Devops with AWS"
-      - duration: "120HRS"
-      - Trainer: "Siva Kumar Reddy"
+      - Devops with AWS
+      - 120HRS
+      - Siva Kumar Reddy
     ansible.builrin.debug:
       msg: "{{ list | items2dict }}"

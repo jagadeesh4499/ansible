@@ -11,7 +11,7 @@
       - jenkins
       - ansible
     live: true #boolean
-    tools:
+    tools: #map/dictionary
       ci: jenkins
       cm: ansible
       cloud: aws
