@@ -1,6 +1,7 @@
 - name: create user
   hosts: local
   connection: local # for localhosts
+  become: yes
   tasks:
   - name: check user exist or not
     ansible.builtin.command: id expense # Used to run a command
