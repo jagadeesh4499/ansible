@@ -12,4 +12,4 @@
       msg: "User info : {{USER}}"
   - name: create user
     ansible.builtin.command: useradd expense
-    when: USER.rc != 0  
+    when: USER.rc != 0  # Here rc means return code(exit status), same like $? in shell scripting. returns 0 when success and 1 for failure
