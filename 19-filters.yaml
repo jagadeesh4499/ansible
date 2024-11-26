@@ -28,8 +28,8 @@
   - name: Convert list to map
     vars:
       list:
-      - Devops with AWS
-      - 120HRS
-      - Siva Kumar Reddy
+      - { "key": "course", "value": "Devops with AWS" }
+      - { "key": "duration", "value": "120Hrs" }
+      - { "key": "Trainer", "value": "Siva Kumar Reddy" }
     ansible.builtin.debug:
       msg: "{{ list | items2dict }}"
