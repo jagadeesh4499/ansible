@@ -3,4 +3,15 @@
   connection: local
   tasks:
   - name: store the output
-    ansible.builtin.shell: ls -ltr > /tmp/output.txt
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt 
+
+    # command module, just runs the command without logging into the server
+    # Shell module login to the server and execute command inside the server
+
+  - name: check the process 
+    ansible.builtin.shell: ps -ef | grep java
+    register: output # register is used to get the output of above command and store in a variable like ${command} in shell scripting
+
+  - name: check the process
+    ansible.builtin.command: ps -ef | grep java
+    register: output
