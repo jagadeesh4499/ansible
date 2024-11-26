@@ -31,5 +31,5 @@
       - Devops with AWS
       - 120HRS
       - Siva Kumar Reddy
-    ansible.builrin.debug:
+    ansible.builtin.debug:
       msg: "{{ list | items2dict }}"
