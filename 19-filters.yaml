@@ -25,3 +25,11 @@
       numbers: [100,154,63,42]
     ansible.builtin.debug:
       msg: "Min: {{ numbers | min }} and Max: {{ numbers | max}}"
+  - name: Convert list to map
+    vars:
+      list:
+      - course: "Devops with AWS"
+      - duration: "120HRS"
+      - Trainer: "Siva Kumar Reddy"
+    ansible.builrin.debug:
+      msg: "{{ list | items2dict }}"
