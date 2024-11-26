@@ -5,7 +5,7 @@
   tasks:
   - name: install and remove packages
     ansible.builtin.package:
-      name: "{{item.name}}"
+      name: "{{item.name}}" # item is reserved keyword
       state: "{{item.state}}"
     loop:
     - {name: "mysql", state: "present"}
