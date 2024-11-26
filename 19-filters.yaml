@@ -10,3 +10,8 @@
       greeting: "Hello Suresh"
     ansible.builtin.debug:
       msg: "{{ greeting | upper }}"
+  - name: convert to lower case
+    vars:
+      greeting: "Hello Suresh"
+    ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"
