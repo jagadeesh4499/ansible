@@ -2,10 +2,10 @@
   hosts: local
   connection: local # for localhosts
   tasks:
-    - name: check user exists or not
-      ansible.builtin.command: id expense # Used to run a command
-      register: USER # register is used to get the output of above command and store in a USER variable like ${command} in shell scripting
-      ignore_erros: True # In ansible executing will stop if the error occurs and don't proceed further so we are using this to proceed further if the error occurs
-    - name: print the user info
-      ansible.builtin.debug:
-        msg: "User info : {{USER}}"
+  - name: check user exists or not
+    ansible.builtin.command: id expense # Used to run a command
+    register: USER # register is used to get the output of above command and store in a USER variable like ${command} in shell scripting
+    ignore_erros: True # In ansible executing will stop if the error occurs and don't proceed further so we are using this to proceed further if the error occurs
+  - name: print the user info
+    ansible.builtin.debug:
+      msg: "User info : {{USER}}"

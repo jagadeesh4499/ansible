@@ -6,11 +6,11 @@
       prompt: please enter the number
       private: false # not confidential
   tasks:
-    - name: print this if number less than 10
-      ansible.builtin.debug:
-        msg: "Given number {{my_number}} is less than 10"
-      when: my_number|int<10 # conditional expression(for prompt by default it will consider as string so we are using |int filter to convert into integer)
-    - name:
-      ansible.builtin.debug:
-        msg: "Given number {{my_number}} is greater than or equal to 10"
-      when: my_number|int>=10 
+  - name: print this if number less than 10
+    ansible.builtin.debug:
+      msg: "Given number {{my_number}} is less than 10"
+    when: my_number|int<10 # conditional expression(for prompt by default it will consider as string so we are using |int filter to convert into integer)
+  - name:
+    ansible.builtin.debug:
+      msg: "Given number {{my_number}} is greater than or equal to 10"
+    when: my_number|int>=10 
