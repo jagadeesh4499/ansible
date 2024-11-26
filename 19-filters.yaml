@@ -41,3 +41,9 @@
         Trainer: "Siva Kumar"
     ansible.builtin.debug:
       msg: "{{ map | dict2items }}"
+  - name: check ip address
+    vars:
+      myip: "255.20.11.25"
+    ansible.builtin.debug:
+      msg: "{{ myip | ansible.utils.ipv4 }}"
+
