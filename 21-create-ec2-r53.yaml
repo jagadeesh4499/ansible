@@ -3,7 +3,7 @@
   connection: local
   become: yes
   vars: # below values will change everytime whenever the new server creates
-    vpc_subnet_id: "subnet-0f1d3a25a69ad3650"
+    vpc_subnet_id: "subnet-0ccd4e3fdde9abf99"
     security_group: "sg-07374e41b5d05c16e"
     image_id: "ami-09c813fb71547fc4f"
     instance_type: "t2.micro"
