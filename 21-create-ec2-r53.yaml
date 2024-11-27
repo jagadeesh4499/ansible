@@ -13,7 +13,7 @@
     - frontend
     zone: "jagadeesh.online"
   tasks:
-  - name: install
+  - name: install pip
     ansible.builtin.package:
       name: pip
       state: present
