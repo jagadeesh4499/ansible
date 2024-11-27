@@ -14,7 +14,7 @@
   - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
-      vpc_subnet_id: "{{ vvpc_subnet_id }}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
       instance_type: "{{ instance_type }}"
       security_group: "{{ security_group }}"
       image_id: "{{ image_id }}"
