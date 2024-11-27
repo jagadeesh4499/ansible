@@ -10,6 +10,7 @@
     - mysql
     - backend
     - frontend
+    zone: "jagadeesh.online"
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -21,4 +22,15 @@
       region: "us-east-1"
     loop: "{{ instances }}"
     register: ec2_instances
-    
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ ec2_instances }}"
+  # - name: create r53 records
+  #   amazon.aws.route53:
+  #   state: present
+  #   zone: 
+  #   record: 
+  #   type: A
+  #   ttl: 7200
+  #   value: 1.1.1.1,2.2.2.2,3.3.3.3
+  #   wait: true
