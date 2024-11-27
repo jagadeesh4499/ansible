@@ -1,6 +1,7 @@
 - name: create ec2 instance and r53 records
   hosts: local
   connection: local
+  become: yes
   vars: # below values will change everytime whenever the new server creates
     vpc_subnet_id: "subnet-0f1d3a25a69ad3650"
     security_group: "sg-07374e41b5d05c16e"
